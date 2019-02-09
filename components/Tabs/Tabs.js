@@ -3,9 +3,9 @@ class TabLink {
   constructor(element) {
     this.element = element;
     
-    // Get the custom data attribute on teh Link
+    // Get the custom data attribute on the Link
     this.data = this.element.dataset.tab;
-    // Using the custom data attribute ge tthe associated Item element
+    // Using the custom data attribute get the associated Item element
     this.item = document.querySelector(`.tabs-item[data-tab="${this.data}"]`);
     // Using the Item element, create a new instance of the TabItem class
     this.tabItem = new TabItem(this.item);
@@ -42,7 +42,7 @@ class TabItem {
     // Select all ".tabs-item" elements from the DOM
     const items = document.querySelectorAll('.tabs-item');
     // Remove the class "tabs-item-selected" from each element
-    items.forEach( item => {
+    items.forEach(item => {
       item.classList.remove('tabs-item-selected');
     })
     // Add a class named "tabs-item-selected" to this element 
